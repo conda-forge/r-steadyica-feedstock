@@ -1,4 +1,4 @@
-{% set version = '1.0' %}
+{% set version = "1.0.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/steadyICA_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/steadyICA/steadyICA_{{ version }}.tar.gz
-  sha256: 8f04d5c0b2c5339eac387cc248381c06a403ec56feee340b99b749f5f4a28a55
+  sha256: 8c09e0aeca95fe0cdbf34fce5bc620c346e652c68101e75d08fe83cbb8cc7642
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -52,12 +52,8 @@ test:
 about:
   home: https://CRAN.R-project.org/package=steadyICA
   license: GPL-2.0-or-later
-  summary: 'Functions related to multivariate measures of independence and ICA: -estimate independent
-    components by minimizing distance covariance; -conduct a test of mutual independence
-    based on distance covariance; -estimate independent components via infomax (a popular
-    method but generally performs poorer than mdcovica, ProDenICA, and/or fastICA, but
-    is useful for comparisons); -order indepedent components by skewness; -match independent
-    components from multiple estimates; -other functions useful in ICA.'
+  summary: 'Functions related to multivariate measures of independence and ICA: -estimate independent components by minimizing distance covariance; -conduct a test of mutual independence based on distance covariance; -estimate independent components via infomax (a popular method but generally performs poorer than mdcovica,
+    ProDenICA, and/or fastICA, but is useful for comparisons); -order indepedent components by skewness; -match independent components from multiple estimates; -other functions useful in ICA.'
   license_family: GPL2
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
